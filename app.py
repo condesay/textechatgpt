@@ -21,9 +21,8 @@ def generate_response(prompt, engine, temperature, max_tokens, top_p, frequency_
     return message
 
 def main():
-    st.title("ChatGPT Web App by Sayon")
     # Set page title
-    st.set_page_config(page_title="ChatGPT Web App by Sayon")
+    st.title("ChatGPT Web App by Sayon")
 
     # Set up sidebar options
     engine_options = {
