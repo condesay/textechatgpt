@@ -64,11 +64,11 @@ def main():
             prompt = "\n".join([f"You: {msg}" for msg in st.session_state["past"]] + [f"Bot: {user_input}"])
             engine = engine_options[settings["engine"]][settings["mode"]]
             output=generate_response(prompt, engine, settings["temperature"], settings["max_tokens"], settings["top_p"], settings["frequency_penalty"], settings["presence_penalty"])
-            #message(output)
+            message(output)
 
             #store the output
-            #st.session_state['past'].append(user_input)
-            st.session_state['generated'].append(output)
+            st.session_state['past'].append(user_input)
+            #st.session_state['generated'].append(output)
 
         if st.session_state['generated']:
 
