@@ -47,9 +47,7 @@ def main():
     if api_key:
         openai.api_key = api_key
 
-        # Display chat interface
-        st.header("Chat")
-        user_input = st.text_input("You:")
+       
         
         
         # storing the chat
