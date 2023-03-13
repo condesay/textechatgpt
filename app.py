@@ -21,7 +21,7 @@ def generate_response(prompt, engine, temperature, max_tokens, top_p, frequency_
 
 def main():
     # Set page title
-    st.title("ChatGPT Web App by Sayon")
+    st.title("ChatGPT Web App Par Sayon")
 
     # Set up sidebar options
     engine_options = {
@@ -42,7 +42,7 @@ def main():
         "presence_penalty": 0.0
     }
     # get user API key
-    api_key = st.text_input("Enter OpenAI API Key:", type="password")
+    api_key = st.text_input("Entrez votre clé OpenAI API Key:", type="password")
 
     if api_key:
         openai.api_key = api_key
