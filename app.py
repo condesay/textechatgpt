@@ -60,7 +60,7 @@ def main():
         user_input=st.text_input("You:",key='input')
 
         if user_input:
-            message(user_input, is_user=True)
+            #message(user_input, is_user=True)
             prompt = "\n".join([f"You: {msg}" for msg in st.session_state["past"]] + [f"Bot: {user_input}"])
             engine = engine_options[settings["engine"]][settings["mode"]]
             output=generate_response(prompt, engine, settings["temperature"], settings["max_tokens"], settings["top_p"], settings["frequency_penalty"], settings["presence_penalty"])
