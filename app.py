@@ -56,7 +56,11 @@ def main():
         user_input=st.text_input("You:",key='input')
 
         if user_input:
-            output=generate_response(user_input, api_key)
+            message(user_input, is_user=True)
+            prompt = "\n".join([f"You: {msg}" for msg in st.session_state["chat_history"]] + [f"Bot: {user_input}"])
+            engine = engine_options[settings["engine"]][settings["mode"]]
+            output=generate_response(prompt, engine, settings["temperature"], settings["max_tokens"], settings["top_p"], settings["frequency_penalty"], settings["presence_penalty"])
+            #message(output)
 
             #store the output
             st.session_state['past'].append(user_input)
