@@ -67,7 +67,7 @@ def main():
             #message(output)
 
             #store the output
-            st.session_state['past'].append(user_input)
+            #st.session_state['past'].append(user_input)
             st.session_state['generated'].append(output)
 
         if st.session_state['generated']:
