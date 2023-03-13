@@ -4,7 +4,6 @@ from streamlit_chat import message
 openai.api_key = "YOUR_API_KEY_HERE"
 
 def generate_response(prompt, engine, temperature, max_tokens, top_p, frequency_penalty, presence_penalty):
-    openai.api_key = api_key
     completion=openai.Completion.create(
         engine=engine,
         prompt=prompt,
